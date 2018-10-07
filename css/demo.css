@@ -905,4 +905,25 @@ canvas{
 	height: auto;
 	padding: 0;
 	margin: 0;
-  }
+	}
+	body::-webkit-scrollbar{
+		width:9px;height:9px;
+		}
+		body::-webkit-scrollbar-button:start:decrement,body::-webkit-scrollbar-button:end:increment{
+		display:block;height:0;background-color:transparent;
+		}
+		body::-webkit-scrollbar-track-piece{
+		background-color:#FFFFFF;
+		opacity:0.2;
+		
+		 display:none;
+		
+		-webkit-border-radius:0;
+		-webkit-border-bottom-right-radius:14px;
+		-webkit-border-bottom-left-radius:14px;
+		}
+		body::-webkit-scrollbar-thumb:vertical{
+		height:50px;
+		background-color:#333333;
+		-webkit-border-radius:8px;
+		}

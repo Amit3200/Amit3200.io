@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Porfolio: Amit Singh</title>
+	<meta name="author" content="Amit Singh" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr-custom.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<script>
+		new WOW().init();
+	</script>
+
+	<style>
+		body {
+			font-family: "QuickSand";
+		}
+
+		li.menu_item {
+			padding: 5px 20px;
+			font-size: 1.25rem;
+			font-weight: 700;
+			margin-top: 1%;
+			text-decoration: none;
+			color: white;
+		}
+
+		li.menu_item a {
+			padding: 5px 20px;
+			font-size: 1.25rem;
+			font-weight: 700;
+			margin-top: 1%;
+			text-decoration: none;
+			color: white;
+		}
+
+		.dot {
+			display: none;
+		}
+
+		.prosmall {
+			display: none;
+		}
+
+		.details {
+			display: none;
+		}
+
+		.headingus {
+			display: none;
+		}
+
+		@media screen and (max-width: 40em) {
+			.dot {
+				display: block;
+				height: 10px;
+				width: 10px;
+				background: #2ecc71;
+				border-radius: 50%;
+				border: 1px solid #ffffff;
+				position: fixed;
+				top: 98px;
+				left: 45px;
+				transition: ease-in .2s;
+			}
+
+			.headingus {
+				display: block;
+				padding-left: 10px;
+				position: absolute;
+				top: 5px;
+				left: 60px;
+				transition: ease-in .2s;
+			}
+
+			.prosmall1 {
+				display: block;
+				transition: ease-in .2s;
+			}
+
+			.prosmall1:hover .prosmall {
+				width: 150px;
+				height: 150px;
+			}
+
+			.prosmall1:hover .headingus {
+				margin-left: 120px;
+			}
+
+			.prosmall1:hover .dot {
+				top: 80px;
+				left: 40px;
+			}
+
+			.details {
+				transition: ease-in .2s;
+			}
+
+			.details h4 {
+				font-size: 0.85rem;
+			}
+
+			.prosmall1:hover .details {
+				display: flex;
+				flex-direction: column;
+				font-size: 0.6rem;
+				position: absolute;
+				left: 200px;
+				top: 50px;
+			}
+
+			/*	.headingus:hover .prosmall{
+		height: 55px;
+		width: 55px;
+	}*/
+			.prosmall {
+				display: block;
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
+				margin-bottom: 20px;
+				transition: ease-in .2s;
+			}
+
+			/*	.prosmall:hover .dot{
+		top:110px;
+		left:60px;
+	}*/
+			/*
+	.prosmall:hover{
+		height:55px;
+		width:55px;
+	}*/
+
+			/*	.prosmall:hover .headingus{
+		margin-left:5px;
+	}*/
+
+		}
+
+		.pages-nav__item {
+			margin-top: 15px;
+		}
+
+		.card {
+			background: #fff;
+			border-radius: .15em;
+			max-height: 800px;
+			padding: 0;
+			box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.16);
+			width: 100%;
+			margin: 10px auto;
+			-webkit-transform-origin: 50% 0;
+			transform-origin: 50% 0;
+			-webkit-transform: perspective(100px) translateY(75px) scale(0.9) rotateX(-10deg);
+			transform: perspective(100px) translateY(75px) scale(0.9) rotateX(-10deg);
+			opacity: 0;
+			transition: all .4s ease, max-height .75s ease;
+		}
+
+		.card:hover {
+			cursor: pointer;
+		}
+
+		.card--added {
+			-webkit-transform: translateY(0px) scale(1);
+			transform: translateY(0px) scale(1);
+			opacity: 1;
+		}
+
+		.card:nth-last-of-type(2) {
+			margin-top: 100px;
+			-webkit-transform: translate3d(0, -10px, -50px);
+			transform: translate3d(0, -10px, -50px);
+			opacity: 1;
+		}
+
+		.card:nth-last-of-type(2):hover {
+			margin-top: 100px;
+			-webkit-transform: translate3d(0, calc(-100% - 0px), -100px);
+			transform: translate3d(0, calc(-100% - 0px), -100px);
+		}
+
+		.card:nth-last-of-type(3) {
+			margin-top: 80px;
+			-webkit-transform: translate3d(0, -30px, -150px);
+			transform: translate3d(0, -30px, -150px);
+			opacity: 0.85;
+		}
+
+		.card:nth-last-of-type(3):hover {
+			margin-top: 80px;
+			-webkit-transform: translate3d(0, calc(-100% - 10px), -200px);
+			transform: translate3d(0, calc(-100% - 10px), -200px);
+		}
+
+		.card:nth-last-of-type(4) {
+			margin-top: 60px;
+			-webkit-transform: translate3d(0, -50px, -250px);
+			transform: translate3d(0, -50px, -250px);
+			opacity: 0.7;
+		}
+
+		.card:nth-last-of-type(4):hover {
+			margin-top: 60px;
+			-webkit-transform: translate3d(0, calc(-100% - 20px), -300px);
+			transform: translate3d(0, calc(-100% - 20px), -300px);
+		}
+
+		.card:nth-last-of-type(5) {
+			margin-top: 40px;
+			-webkit-transform: translate3d(0, -70px, -350px);
+			transform: translate3d(0, -70px, -350px);
+			opacity: 0.55;
+		}
+
+		.card:nth-last-of-type(5):hover {
+			margin-top: 40px;
+			-webkit-transform: translate3d(0, calc(-100% - 30px), -400px);
+			transform: translate3d(0, calc(-100% - 30px), -400px);
+		}
+
+		.card:nth-last-of-type(6) {
+			-webkit-transform: translate3d(0, -90px, -160px);
+			transform: translate3d(0, -90px, -160px);
+			opacity: 0.4;
+		}
+
+		.card:nth-last-of-type(6):hover {
+			-webkit-transform: translate3d(0, calc(-100% - 40px), -500px);
+			transform: translate3d(0, calc(-100% - 40px), -500px);
+		}
+
+		.card:nth-last-of-type(7) {
+			-webkit-transform: translate3d(0, -110px, -192px);
+			transform: translate3d(0, -110px, -192px);
+			opacity: 0.25;
+		}
+
+		.card:nth-last-of-type(7):hover {
+			-webkit-transform: translate3d(0, calc(-100% - 50px), -192px);
+			transform: translate3d(0, calc(-100% - 50px), -192px);
+		}
+
+		.card:nth-last-of-type(8) {
+			-webkit-transform: translate3d(0, -70px, -224px);
+			transform: translate3d(0, -70px, -224px);
+			opacity: 0.1;
+		}
+
+		.card:nth-last-of-type(8):hover {
+			-webkit-transform: translate3d(0, calc(-100% - 60px), -224px);
+			transform: translate3d(0, calc(-100% - 60px), -224px);
+		}
+
+		.card:nth-last-of-type(9) {
+			-webkit-transform: translate3d(0, -80px, -256px);
+			transform: translate3d(0, -80px, -256px);
+			opacity: -0.05;
+		}
+
+		.card:nth-last-of-type(9):hover {
+			-webkit-transform: translate3d(0, calc(-100% - 70px), -256px);
+			transform: translate3d(0, calc(-100% - 70px), -256px);
+		}
+
+		.card:nth-last-of-type(10) {
+			-webkit-transform: translate3d(0, -90px, -288px);
+			transform: translate3d(0, -90px, -288px);
+			opacity: -0.2;
+		}
+
+		.card:nth-last-of-type(10):hover {
+			-webkit-transform: translate3d(0, calc(-100% - 80px), -288px);
+			transform: translate3d(0, calc(-100% - 80px), -288px);
+		}
+
+		.card:nth-last-of-type(11) {
+			-webkit-transform: translate3d(0, -100px, -320px);
+			transform: translate3d(0, -100px, -320px);
+			opacity: -0.35;
+		}
+
+		.card:nth-last-of-type(11):hover {
+			-webkit-transform: translate3d(0, calc(-100% - 90px), -320px);
+			transform: translate3d(0, calc(-100% - 90px), -320px);
+		}
+
+		.card:nth-last-of-type(n+10) {
+			display: none;
+		}
+
+		.card:nth-last-of-type(n+2) {
+			position: absolute;
+			max-height: 100px;
+			overflow: hidden;
+		}
+
+		.card:nth-last-of-type(n+2):hover {
+			opacity: 1;
+			transition-delay: .333s;
+		}
+
+		.stacked-cards {
+			margin-top: 120px;
+			-webkit-perspective: 1000px;
+			perspective: 1000px;
+			position: relative;
+		}
+
+		#pro1,
+		#pro2,
+		#pro3,
+		#pro4 {
+			background: #2d3436;
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+			color: white;
+			display: none;
+			position: fixed;
+
+			font-family: "QuickSand";
+			font-size: 1.6rem;
+			transition: all .5s ease-in-out;
+		}
+		#pro1:active .content,.progress,.progress1{
+			background: rgba(0, 0, 0, 0.9);
+		}
+
+		.poru,
+		.poru1,
+		.poru2,
+		.poru3 {
+			top: 1px;
+			margin-left: 29px;
+			position: absolute;
+			font-size: 18px;
+			cursor: pointer;
+			transition: ease-in .2s;
+		}
+
+		@media screen and (max-width:700px) {
+
+			.poru,
+			.poru1,
+			.poru2,
+			.poru3 {
+				left: -4px;
+			}
+		}
+
+		.poru:hover,
+		.poru1:hover,
+		.poru2:hover,
+		.poru3:hover {
+			transform: rotate(90deg);
+		}
+
+		.detailed {
+			margin: 10px auto;
+			text-align: center;
+		}
+
+		.canvas1 {
+			background-color: #1d1e22;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+
+			top: 0px;
+		}
+
+		#canvas12 {
+			min-height: 100%;
+			background: linear-gradient(130deg, rgba(219, 72, 43, 1) 0%,
+				rgba(151, 41, 108, 1) 100%);
+		}
+
+		#info {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+
+		#info {
+			background: rgba(0, 0, 0, 0.8);
+			padding: 12px 10px;
+			margin-bottom: 1px;
+			color: #fff;
+		}
+
+		#info h1 {
+			line-height: 22px;
+			font-weight: 300;
+			font-size: 18px;
+			margin: 0;
+		}
+
+		#info h2 {
+			line-height: 14px;
+			font-weight: 300;
+			font-size: 12px;
+			color: rgba(255, 255, 255, 0.8);
+			margin: 0 0 6px 0;
+		}
+
+		#info a {
+			text-transform: uppercase;
+			text-decoration: none;
+			border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+			margin-right: 4px;
+			line-height: 20px;
+			font-size: 10px;
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+		#info a:hover {
+			border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+			color: rgba(255, 255, 255, 1.0);
+		}
+
+		.progress {
+			background: #1d1e22;
+			max-height: 500px;
+			height: 450px;
+			display: flex;
+			margin-top:-20px;
+		}
+
+
+		/* STYLES FOR PROGRESSBARS */
+
+		.progress-radial,
+		.progress-radial * {
+			-webkit-box-sizing: content-box;
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+
+		/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+		.progress-radial {
+			float: left;
+			margin-right: 4%;
+			position: relative;
+			width: 20%;
+			border-radius: 50%;
+		}
+
+		.progress-radial:first-child {
+			margin-left: 4%;
+		}
+
+		/* -------------------------------------
+ * Optional centered circle w/text
+ * ------------------------------------- */
+		.progress-radial .overlay {
+			position: absolute;
+			width: 80%;
+			background-color: #1d1e22;
+			border-radius: 50%;
+			font-size: 14px;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		.progress-radial .overlay p {
+			color: #cecece;
+			position: absolute;
+			line-height: 40px;
+			text-align: center;
+			width: 100%;
+			top: 50%;
+			margin-top: -20px;
+		}
+
+		/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+		.progress-0 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(0deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(90deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-5 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(342deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(108deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-10 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(324deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(126deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-15 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(306deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(144deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-20 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(288deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(162deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-25 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-30 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(252deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(198deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-35 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(234deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(216deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-40 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(216deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(234deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-45 {
+			background-image: -webkit-linear-gradient(0deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(198deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #1d1e22 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(252deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-50 {
+			background-image: -webkit-linear-gradient(180deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(-90deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-55 {
+			background-image: -webkit-linear-gradient(162deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(-72deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-60 {
+			background-image: -webkit-linear-gradient(144deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(-54deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-65 {
+			background-image: -webkit-linear-gradient(126deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(-36deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-70 {
+			background-image: -webkit-linear-gradient(108deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(-18deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-75 {
+			background-image: -webkit-linear-gradient(90deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(0deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-80 {
+			background-image: -webkit-linear-gradient(72deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(18deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-85 {
+			background-image: -webkit-linear-gradient(54deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(36deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-90 {
+			background-image: -webkit-linear-gradient(36deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(54deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-95 {
+			background-image: -webkit-linear-gradient(18deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(72deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress-100 {
+			background-image: -webkit-linear-gradient(0deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+			background-image: linear-gradient(90deg, #5c5edc 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, #5c5edc 50%, #1d1e22 50%, #1d1e22);
+		}
+
+		.progress1 {
+			padding-top: 10px;
+			background: #1d1e22;
+			height: 600px;
+			margin: 0px auto;
+			text-align: center;
+		}
+
+
+	</style>
+	<script>
+		function prodisp() {
+			//alert("helli");
+			document.getElementById("pro1").style.display = "block";
+			document.getElementsByTagName("body").style.overflow = "hidden";
+			document.getElementsByClassName("body1")[0].style.overflow = "auto";
+		}
+
+		function prodisp1() {
+			//alert("hello");
+			document.getElementById("pro2").style.display = "block";
+			document.getElementsByTagName("body").style.overflow = "hidden";
+			document.getElementsByClassName("body2")[0].style.overflow = "auto";
+		}
+
+		function prodisp2() {
+			//alert("hello1");
+			document.getElementById("pro3").style.display = "block";
+			document.getElementsByTagName("body").style.overflow = "hidden";
+			document.getElementsByClassName("body3")[0].style.overflow = "auto";
+		}
+
+		function prodisp3() {
+			//alert("hello1");
+			document.getElementById("pro4").style.display = "block";
+			document.getElementsByTagName("body").style.overflow = "hidden";
+			document.getElementsByClassName("body4")[0].style.overflow = "auto";
+		}
+
+		function backtohome() {
+			document.getElementsByTagName("body")[0].style.overflow = "auto";
+			setTimeout(function () {
+				document.getElementsByClassName("body1")[0].style.overflow = "hidden";
+			}, 3000);
+		}
+
+		function backtohome1() {
+			document.getElementsByTagName("body")[0].style.overflow = "auto";
+			setTimeout(function () {
+				document.getElementsByClassName("body2")[0].style.overflow = "hidden";
+			}, 3000);
+		}
+
+		function backtohome2() {
+			document.getElementsByTagName("body")[0].style.overflow = "auto";
+			setTimeout(function () {
+				document.getElementsByClassName("body3")[0].style.overflow = "hidden";
+			}, 3000);
+		}
+
+		function backtohome3() {
+			document.getElementsByTagName("body")[0].style.overflow = "auto";
+			setTimeout(function () {
+				document.getElementsByClassName("body4")[0].style.overflow = "hidden";
+			}, 3000);
+		}
+		$(document).ready(function () {
+			$(".projects").click(function () {
+				$("#pro1").removeClass("animated slideOutDown");
+				$("#pro1").addClass("animated slideInUp");
+			});
+		});
+		$(document).ready(function () {
+			$(".exp1").click(function () {
+				$("#pro2").removeClass("animated slideOutRight");
+				$("#pro2").addClass("animated slideInRight");
+			});
+		});
+		$(document).ready(function () {
+			$(".educate").click(function () {
+				$("#pro3").removeClass("animated slideOutDown");
+				$("#pro3").addClass("animated slideInDown");
+			});
+		});
+		$(document).ready(function () {
+			$(".about").click(function () {
+				$("#pro4").removeClass("animated slideOutRight");
+				$("#pro4").addClass("animated slideInRight");
+			});
+		});
+		$(document).ready(function () {
+			$(".poru").click(function () {
+				$("#pro1").removeClass("animated slideInUp");
+				$("#pro1").addClass("animated slideOutDown");
+			});
+		});
+		$(document).ready(function () {
+			$(".poru1").click(function () {
+				$("#pro2").removeClass("animated slideInRight");
+				$("#pro2").addClass("animated slideOutRight");
+			});
+		});
+		$(document).ready(function () {
+			$(".poru2").click(function () {
+				$("#pro3").removeClass("animated slideInDown");
+				$("#pro3").addClass("animated slideOutDown");
+			});
+		});
+		$(document).ready(function () {
+			$(".poru3").click(function () {
+				$("#pro4").removeClass("animated slideInRight");
+				$("#pro4").addClass("animated slideOutRight");
+			});
+		});
+		$(document).ready(function () {
+			$(".projector").click(function () {
+				$("#pro1").removeClass("animated slideOutDown");
+				$("#pro1").addClass("animated slideInUp");
+			});
+		});
+		$(document).ready(function () {
+			$(".exp").click(function () {
+				$("#pro2").removeClass("animated slideOutRight");
+				$("#pro2").addClass("animated slideInRight");
+			});
+		});
+		$(document).ready(function () {
+			$(".educate1").click(function () {
+				$("#pro3").removeClass("animated slideOutDown");
+				$("#pro3").addClass("animated slideInDown");
+			});
+		});
+		$(document).ready(function () {
+			$(".aboutme").click(function () {
+				$("#pro4").removeClass("animated slideOutRight");
+				$("#pro4").addClass("animated slideInRight");
+			});
+		});
+		$(document).ready(function () {
+			$(".setsize").each(function () {
+				$(this).height($(this).width());
+			});
+		});
+		$(window).on('resize', function () {
+			$(".setsize").each(function () {
+				$(this).height($(this).width());
+			});
+		});
+		$(function() {
+ $('.i1').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs3.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i2').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs4.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i3').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs5.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i4').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs6.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i5').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs7.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i6').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs13.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i7').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs14.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i8').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs18.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i9').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs20.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i10').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs22.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i11').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs/8.jpg");
+   return false;
+ });
+});
+$(function() {
+ $('.i12').click(function(e){
+	 //alert("hell");
+	e.preventDefault();
+   $("#vtot").attr('src',"img/Designs9.jpg");
+   return false;
+ });
+});
+	</script>
+</head>
+
+<body>
+	<!-- Main container1 -->
+	
+
+	  
+	<div class="container1">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<div class="dummy-logo">
+				<div>
+					<h2 class="dummy-heading menu__breadcrumbs_my_profile" style="color: white;">My Profile</h2>
+				</div>
+				<div class="" style="margin: 0 auto;">
+					<div style="border-radius: 50%; background:rgba(92,94,220,0.7); height: 72px; width: 72px; margin: 0 auto;"><img
+						 src="img/dp1.jpg" style="height: 69px; width: 69px; border-radius: 50%;margin:2px auto;"></div>
+				</div>
+				<div>
+					<h2 class="dummy-heading menu__breadcrumbs_profile_name" style="color: white;">Amit Singh Sansoya</h2>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 col-lg-4 barhere" style="margin-left:7px auto">12<p><span class="detailhere">Projects</span></p>
+					</div>
+					<div class="col-sm-4 col-lg-4 barhere" style="margin-left:7px auto">11K<p><span class="detailhere">Lines of Code</span></p>
+					</div>
+					<div class="col-sm-4 col-lg-4 barhere" style="margin-left:7px auto">3<p><span class="detailhere">Internships</span></p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- <button class="action pxaction--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button> -->
+		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+		<nav id="ml-menu" class="menu">
+			<button class="action action--close meio" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level" style="margin:-20px 0 0 0;">
+					<li class="menu_item prosmall1">
+						<div class="dot"></div><img src="img/dp1.jpg" class='prosmall' \>
+						<a href="#" class="headingus">PROFILE</a>
+						<div class="details">
+							<h4>Amit Singh Sansoya</h4>
+							<ul style="margin-left:-25px;">
+								<li>Programmer</li>
+								<li>Developer</li>
+								<li>Frontend Designer</li>
+								<li>Backend Manager</li>
+							</ul>
+						</div>
+					</li>
+					<div class="pages-nav__item"><a class="link link--page projector" href="#page-home" onclick="prodisp()">Projects
+							&amp; Achievements</a></div>
+					<div class="pages-nav__item experiment"><a class="link link--page exp" href="#page-docu" onclick="prodisp1()">Experience</a></div>
+					<div class="pages-nav__item education"><a class="link link--page educate1" href="#page-manuals" onclick="prodisp2()">Education</a></div>
+					<div class="pages-nav__item aboutme"><a class="link link--page about1" href="#page-software" onclick="prodisp3()">About
+							Me</a></div>
+							<div style="float:right;padding-left:0px;margin-right:50px;">
+							<ul>
+								<li>
+									<a href="https://www.facebook.com/profile.php?id=100002947688555"><span style="color:#5c5edc;font-size:0.6rem;padding-left:0px;margin-top:4px;float:left"><i class="fa fa-facebook-square"></i> Facebook</span></a>
+								</li>
+									<li>
+										<a href="https://www.instagram.com/amit3200/?hl=en"><span style="color:#5c5edc;font-size:0.6rem;padding-left:0px;margin-top:4px;float:left"><i class="fa fa-instagram"></i> Instagram</span></a>
+									</li>
+										<li>
+											<a href="https://www.linkedin.com/in/amitsinghsansoya/"><span style="color:#5c5edc;font-size:0.6rem;padding-left:0px;margin-top:4px;float:left"><i class="fa fa-linkedin-square"></i> Linkedin</span></a>
+										</li>
+									</ul>
+									</div>
+				</ul>
+				</ul>
+			</div>
+		</nav>
+		<canvas id="canvas" class="canvas1"></canvas>
+		<div class="content animated bounceInUp">
+			<div class="row">
+				<div class="col-sm-12 col-lg-12">
+					<div class="stacked-cards">
+						<div class="card">
+							<h2 class="heading-beta about" onclick="prodisp3()">About Me</h2>
+						</div>
+						<div class="card">
+							<h2 class="heading-beta educate" onclick="prodisp2()">Education</h2>
+						</div>
+						<div class="card exp1">
+							<h2 class="heading-beta exp1" onclick="prodisp1()">Experience</h2>
+						</div>
+						<div class="card projects" onclick="prodisp()">
+							<h2 class="heading-beta projects">Projects and Achievements</h2>
+						</div>
+						<div class="card">
+							<h2 class="heading-beta">About Me</h2>
+						</div>
+
+					</div>
+				</div>
+				<div id="pro1">
+					<div class="body1">
+						<h3 style="color:#5c5edc;padding-left:30px;">Projects</h3>
+						<ul>
+							<li>
+								<a href="#">
+									<p>
+										<span>2018</span>
+										<span>Smart Vehicle Theft Control</span>
+										<span class="dope">Smart System which scans the number plate and detects text and make the entry in the database. This project has also the concept of digitalized Toll Tax by generating QR codes and generating reports through data visualization. This application also helps in finding the stolen vehicles. It uses face recognition to detect the culprits. This project was built with the python and php. This project was part of the Microsoft Hackathon.</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<p>
+										<span>2017-2018</span>
+										<span>Automated Classroom</span>
+										<span class="dope">A way to automate class where attendance gets marked by recognition of face and notes are sent by a virtual assistant and the queries are solved by it and many more.</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="www.pofixo.tk">
+									<p>
+										<span>2017</span>
+										<span>Pofixo Chat Application</span>
+										<span class="dope">Pofixo is a web based chat application where people can login and chat with each other built using MySQL, PHP, HTML, CSS and Bootstrap. Know more at: <strong style="color:#5c5edc;font-size: 0.9rem;">www.pofixo.tk</strong>.</span>
+									</p>
+								</a>
+							</li>
+
+						</ul>
+						<ul>
+							<li>
+								<a href="#">
+									<p>
+										<span>2016</span>
+										<span>Hangman Game</span>
+										<span class="dope">Simple Python based game in which the user had to guess the word and fill the blanks. The user is given 8 choices to make and on each incorrect guess marks are deducted.</span>
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>
+										<span>2018</span>
+										<span>Music Web App</span>
+										<span class="dope">This music web app was developed on the MEAN Stack based web framework and the application allowed the user to listen to the Music and also allows them to create the playlist and favourites list. This also allows them to fetch the top musics from the napster API. This project was the part of the internship at the VenturePact Pvt. Ltd.</span>
+									</p>
+								</a>
+							</li>
+							<li>
+									<a href="https://github.com/Amit3200">
+										<p>
+											<span>2016-2018</span>
+											<span>For More Refer to My Github Profile <i class="fa fa-github"></i></span>
+											<span class="dope"><strong style="color: #5c5edc">https://github.com/Amit3200</strong></span>
+										</p>
+									</a>
+								</li>
+
+						</ul>
+						<h3 style="color:#5c5edc;padding-left:30px;">Achievements</h3>
+						<div style="overflow-y: auto">
+						<ul>
+							<li>
+								<a href="#">
+									<p>
+										<span>2018</span>
+										<span>Student Honor Roll for Academic Performance (2018)</span>
+										<span class="dope">For maintaining the Academic Record</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<p>
+										<span>2018</span>
+										<span>Piathon Hackathon Winner – 1st Prize (2018)</span>
+										<span class="dope">For Creating the solution for the real life problem.</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<p>
+										<span>2017</span>
+										<span>Techathon Hackathon – Data Analysis Winner</span>
+										<span class="dope">Performed Data Analysis and won for conducting one of the best analysis.</span>
+									</p>
+								</a>
+							</li>
+						</ul>		
+						<ul>
+								<li>
+									<a href="#">
+										<p>
+											<span>2017</span>
+											<span>Microsoft Hackathon 1.0 Jury Award Winner</span>
+											<span class="dope">Created a personal voice assistant to solve the problems.</span>
+										</p>
+									</a>
+								</li>
+									<li>
+										<a href="#">
+											<p>
+												<span>2017</span>
+												<span>Hack U Mask Hackathon Winner</span>
+												<span class="dope">Created best solution for a Judicial System of India.</span>
+											</p>
+										</a>
+									</li>
+								</ul>	
+								</div>
+						<span class="icon icon--cross poru" onclick="backtohome()"></span>
+					</div>
+				</div>
+
+				<div id="pro2">
+					<div class="body2">
+						<ul>
+							<li>
+								<a href="#">
+									<p>
+										<span>2017</span>
+										<span>Graphic Designer at <strong style="color:#5c5edc">Khoon Organization</strong></span>
+										<span class="dope">Worked with Khoon Organization. Developed posters and other social media posts for them using Photoshop CS6.</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<p>
+										<span>2017</span>
+										<span>Educator at <strong style="color:#5c5edc">Unacademy</strong></span>
+										<span class="dope">I was Educator at Unacademy where I taugh students about the fundamentals of Web Development which included HTML, CSS and BootStrap. I also taught them about python and C++.</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<p>
+										<span>2018</span>
+										<span>Technical Development Assistant at <strong style="color:#5c5edc">VenturePact</strong></span>
+										<span class="dope">I worked here on MEAN stack and learned a lot and developed a project with my team on the MUSIC PLAYER website. I was mostly focused with the Angular Stuff in it and developed the UI and made it to contact with the backend.</span>
+									</p>
+								</a> 
+							</li>
+
+						</ul>
+						<ul>
+							<li>
+								<a href="#">
+									<p>
+										<span>2018</span>
+										<span>Freelancer at <strong style="color:#5c5edc">Freelancer.com</strong></span>
+										<span class="dope">I have experience of doing freelancing and I have proficiency in making the posters and business card. I have also experience with the Web Development and experience in writing python scripts.</span>
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>
+										<span>2016-2017</span>
+										<span>Head of Membership and Performance at <strong style="color:#5c5edc">United Nations Youth Community</strong></span>
+										<span class="dope">I was part of the one of the well known Organization United Nation Youth Community where I learned about public speaking and about the managements. I dealt with variety of challenges and also organized big events with the help of this great team.</span>
+									</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p>
+										<span>2016-2017</span>
+										<span>Video Editor and Technical Lead at <strong style="color:#5c5edc">Horizon</strong></span>
+										<span class="dope">In this organiztion we organized small events for the students and I worked there as a Video Editor and later on I took the Techinal Lead at Horizon.</span>
+									</p>
+								</a>
+							</li>
+
+
+						</ul>
+						
+					</ul>
+					<ul>
+						<li>
+							<a href="#">
+								<p>
+									<span>2018</span>
+									<span>Freelancer at <strong style="color:#5c5edc">Freelancer.com</strong></span>
+									<span class="dope">I have experience of doing freelancing and I have proficiency in making the posters and business card. I have also experience with the Web Development and experience in writing python scripts.</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>
+									<span>2016-2017</span>
+									<span>Head of Membership and Performance at <strong style="color:#5c5edc">United Nations Youth Community</strong></span>
+									<span class="dope">I was part of the one of the well known Organization United Nation Youth Community where I learned about public speaking and about the managements. I dealt with variety of challenges and also organized big events with the help of this great team.</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<p>
+									<span>2016-2017</span>
+									<span>Video Editor and Technical Lead at <strong style="color:#5c5edc">Horizon</strong></span>
+									<span class="dope">In this organiztion we organized small events for the students and I worked there as a Video Editor and later on I took the Techinal Lead at Horizon.</span>
+								</p>
+							</a>
+						</li>
+
+
+					</ul>				
+						<span class="icon icon--cross poru1" onclick="backtohome1()"></span>
+					</div>
+				</div>
+				<div id="pro3">
+					<div class="body3">
+						<ul>
+							<li>
+								<a href="#">
+									<p>
+										<span>Pursuing</span>
+										<span>Lovely Professional University</span>
+										<span class="dope">Currently Pursuing Bachelor of Computer Science and Engineering</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									<p>
+										<span>2016</span>
+										<span>Khalsa Model Senior Secondary School</span>
+										<span class="dope">Graduate High School in 2016, specialization in Science.</span>
+									</p>
+								</a>
+							</li>
+
+							<li>
+									<p>
+										<span>2016 - 2018</span>
+										<span>Certifications</span>
+										<span class="dope">
+											<ul>
+													<li>
+													<h6 style="color:#5c5edc">Simplilearn: Complete Python</h6>
+													<!-- <span href="https://certificates.simplicdn.net/share/830766.pdf" >See Now</a> -->
+													</li>
+													<li>
+															<h6 style="color:#5c5edc">IBM: Python for Data Science</h6>
+															<!-- <span href="https://www.youracclaim.com/badges/944e6d27-0103-4bd3-a7ba-7d12fb791a90/linked_in_profile">See Now</a> -->
+													</li>
+													<li>
+															<h6 style="color:#5c5edc">Edx MITx : Introduction to Computer Science and Programming Using Python</h6>
+															<!-- <span href="https://courses.edx.org/certificates/5c9fd5a899ba454fb808645ca7f5712c">See Now</a> -->
+															</li>
+															</ul>
+										</span>
+									</p>
+							</li>
+						</ul>
+						
+						<span class="icon icon--cross poru2" onclick="backtohome2()"></span>
+					</div>
+				</div>
+				<div id="pro4">
+					<div class="body4">
+						<ul>
+							<li>
+								<a href="#">
+									<p>
+										<span>About Me</span>
+										<span>Amit Singh Sansoya</span>
+										<span class="dope">
+											Amit Singh is a student of Lovely Professional University currently pursuing Bachelor of Computer Science and Engineering.
+											He is technically active and has passion to develop new applications using the latest tech. Currently, he is enthusiast about the 
+										field of Data Science and is exploring that field.</span>
+									</p>
+								</a>
+							</li>
+						</ul>
+						<h5 style="padding-left: 30px;">Want to talk? Feel Free</h5>
+						<ul>
+							<li>
+								<a href="https://www.facebook.com/profile.php?id=100002947688555"><span style="color:#5c5edc;font-size:1.2rem;padding-left:10px;margin-top:-8px;"><i class="fa fa-facebook-square"></i> Facebook</span></a>
+							</li>
+						</ul>
+						<ul>
+								<li>
+									<a href="https://www.instagram.com/amit3200/?hl=en"><span style="color:#5c5edc;font-size:1.2rem;padding-left:10px;margin-top:-8px;"><i class="fa fa-instagram"></i> Instagram</span></a>
+								</li>
+							</ul>
+							<ul>
+									<li>
+										<a href="https://www.linkedin.com/in/amitsinghsansoya/"><span style="color:#5c5edc;font-size:1.2rem;padding-left:10px;margin-top:-8px;"><i class="fa fa-linkedin-square"></i> Linkedin</span></a>
+									</li>
+								</ul>
+							<ul>
+									<li>
+										<a href="https://github.com/Amit3200"><span style="color:#5c5edc;font-size:1.2rem;padding-left:10px;margin-top:-8px;"><i class="fa fa-github"></i> Github</span></a>
+									</li>
+								</ul>
+							<ul>
+									<li>
+										<a href="https://dribbble.com/amit3200"><span style="color:#5c5edc;font-size:1.2rem;padding-left:10px;margin-top:-8px;"><i class="fa fa-dribbble"></i> Dribbble</span></a>
+									</li>
+								</ul>
+						<span class="icon icon--cross poru3" onclick="backtohome3()"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row animated bounceInUp" style="margin-top:120px;color: white;">
+				<div class="col-sm-12 col-lg-12 detailed">
+					<h2 class="wow bounceIn" data-wow-delay="0.9s">I AM</h2>
+					<h1 class="wow bounceIn">&nbsp;<span class="typed wow bounceInUp" data-wow-delay="1s">&nbsp;</span>&nbsp;</h1>
+				</div>
+			</div>
+			<div class="moredown wow animated bounceInUp" style="background:#1d1e22;height: 400px;position: relative;margin-top:160px;">
+				<section class="progress" style="padding-top: 40px;">
+					<div class="row" style="text-align: center;font-family:'QuickSand';margin: 30px auto;">
+						<div class="col-sm-12 col-lg-6 wow animated bounceInUp" style="margin: 10px auto;">
+							<div class="progress-radial progress-55 setsize">
+								<div class="overlay setsize">
+									<p>55%</p>
+								</div>
+							</div>
+							<h4 style="color:white;margin-top:15px;">Web Development</h4>
+						</div>
+						<div class="col-sm-12 col-lg-6 wow animated bounceInUp" style="margin: 10px auto;">
+							<div class="progress-radial progress-45 setsize">
+								<div class="overlay setsize">
+									<p>45%</p>
+								</div>
+							</div>
+							<h4 style="color:white;margin-top:15px;">Programming</h4>
+						</div>
+						<div class="col-sm-12 col-lg-6 wow animated bounceInUp" style="margin: 10px auto;">
+							<div class="progress-radial progress-50 setsize">
+								<div class="overlay setsize">
+									<p>50%</p>
+								</div>
+							</div>
+							<h4 style="color:white;margin-top:15px;">Development</h4>
+						</div>
+						<div class="col-sm-12 col-lg-6 wow animated bounceInUp" style="margin: 10px auto;">
+							<div class="progress-radial progress-60 setsize">
+								<div class="overlay setsize">
+									<p>60%</p>
+								</div>
+							</div>
+							<h4 style="color:white;margin-top:15px;">UI Designing</h4>
+						</div>
+
+					</div>
+				</section>
+				<section class="progress1 wow animated bounceInUp" style="padding-top: 25px; margin-top:-2px;">
+					<div class="row" style="color:white;">
+						<div class="col-lg-12 col-sm-12">
+							<h2>My Works</h2>
+							<hr style="    height: 1px;
+								color: #000;
+								background-color: #000;
+								width: 10%;
+								text-align: center;
+								margin: 0px auto;">
+						</div>
+						<section class="gallery wow animated bounceInUp">
+							<div class="row1">
+								<ul>
+									<a href="#" class="close" style="color:white;left:10px"></a>
+									<li class="wow animated bounceInUp">
+										<a href="#item01" onclick="future()" class="i1">
+											<img src="img/Designs3.jpg" class="i1" alt="">
+										</a>
+									</li>
+
+									<li class="wow animated bounceInUp">
+										<a href="#item01" onclick="future()" class="i2">
+											<img src="img/Designs4.jpg" class="i2" alt="">
+										</a>
+									</li>
+
+									<li class="wow animated bounceInUp">
+										<a href="#item01" onclick="future()" class="i3">
+											<img src="img/Designs5.jpg" class="i3" alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i4">
+											<img src="img/Designs6.jpg" class="i4" alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i5">
+											<img src="img/Designs7.jpg" class="i5" alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i6">
+											<img src="img/Designs13.jpg" class="i6"  alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i7">
+											<img src="img/Designs14.jpg" class="i7" alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i8">
+											<img src="img/Designs18.jpg" class="i8" alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i9">
+											<img src="img/Designs20.jpg" class="i9"  alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i10">
+											<img src="img/Designs22.jpg" class="i10" alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i11">
+											<img src="img/Designs8.jpg" class="i11" alt="">
+										</a>
+									</li>
+									<li class="wow animated bounceInUp">
+										<a class="image" href="#item01" onclick="future()" class="i12">
+											<img src="img/Designs9.jpg" class="i12" alt="">
+										</a>
+									</li>
+								</ul>
+							</div> <!-- / row -->
+
+							<!-- Item 01 -->
+							<div id="item01" class="port" style="padding-bottom: 600px;">
+
+								<div class="row1" style="color:black">
+									<div class="description" style="margin: -100px auto;">
+										<h1>UI Designs</h1>
+										<p>Made By Amit Singh Sansoya with <i class="fa fa-heart-o" aria-hidden="true"></i> and <i class="fa fa-coffee"
+											 aria-hidden="true"></i></p>
+									</div>
+
+									<img src="https://cdn.dribbble.com/users/545884/screenshots/3981307/lorena2.png" alt="" style="float:right" id="vtot">
+								</div>
+							</div> <!-- / row -->
+
+					</div> <!-- / Item 02 -->
+
+					<!-- Item 02 -->
+					<div id="item02" class="port">
+
+						<div class="row1">
+							<div class="description">
+								<h1>Item 02</h1>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est.
+									Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+							</div>
+							<img src="https://cdn.dribbble.com/users/545884/screenshots/2883479/cover.jpg" alt="">
+						</div> <!-- / row -->
+
+					</div> <!-- / Item 02 -->
+
+				</section> <!-- / projects -->
+			</div>
+			<p style="color:white;position: absolute;bottom:0; left:0; right:0;font-size:0.8rem;">Made By Amit Singh Sansoya
+				with <i class="fa fa-heart-o" aria-hidden="true"></i> and <i class="fa fa-coffee" aria-hidden="true"></i></p>
+			</section>
+		</div>
+	</div>
+	<!-- /view -->
+	<script src="js/classie.js"></script>
+	<script src="js/dummydata.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
+	<!-- <script src="js/index1.js"></script> -->
+	<script>
+		(function () {
+			var menuEl = document.getElementById('ml-menu'),
+				mlmenu = new MLMenu(menuEl, {
+					// breadcrumbsCtrl : true, // show breadcrumbs
+					// initialBreadcrumb : '', // initial breadcrumb text
+					backCtrl: false, // show back button
+					// itemsDelayInterval : 60, // delay between each menu item sliding animation
+					onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+				});
+
+			// mobile menu toggle
+			var openMenuCtrl = document.querySelector('.action--open'),
+				closeMenuCtrl = document.querySelector('.action--close');
+
+			openMenuCtrl.addEventListener('click', openMenu);
+			closeMenuCtrl.addEventListener('click', closeMenu);
+
+			function openMenu() {
+				classie.add(menuEl, 'menu--open');
+				closeMenuCtrl.focus();
+			}
+
+			function closeMenu() {
+				classie.remove(menuEl, 'menu--open');
+				openMenuCtrl.focus();
+			}
+
+			// simulate grid content loading
+			var gridWrapper = document.querySelector('.content');
+
+			function loadDummyData(ev, itemName) {
+				ev.preventDefault();
+
+				closeMenu();
+				gridWrapper.innerHTML = '';
+				classie.add(gridWrapper, 'content--loading');
+				setTimeout(function () {
+					classie.remove(gridWrapper, 'content--loading');
+					gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+				}, 700);
+			}
+		})();
+		$(function () {
+			$('.scroll-link').on('click', function () {
+				$("html, body").animate({
+					scrollTop: $($(this).attr("href")).offset().top
+				}, 5);
+				return false;
+			});
+			$(".typed").typed({
+				strings: ["a Web Developer.", "an UI Designer.", "a Data Scientist Enthusiast.", "Amit Singh."],
+				// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+				stringsElement: null,
+				// typing speed
+				typeSpeed: 80,
+				// time before typing starts
+				startDelay: 1200,
+				// backspacing speed
+				backSpeed: 80,
+				// time before backspacing
+				backDelay: 500,
+				// loop
+				loop: true,
+				// false = infinite
+				infinite: true,
+				// show cursor
+				showCursor: false,
+				// character for cursor
+				cursorChar: "|",
+				// attribute to type (null == text)
+				attr: null,
+				// either html or text
+				contentType: 'html',
+				// call when done callback function
+				callback: function () {},
+				// starting callback function before each string
+				preStringTyped: function () {},
+				//callback for every typed string
+				onStringTyped: function () {},
+				// callback for reset
+				resetCallback: function () {}
+			});
+		});
+		window.requestAnimFrame = (function () {
+			return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.oRequestAnimationFrame ||
+				window.msRequestAnimationFrame ||
+				function (callback) {
+					window.setTimeout(callback, 1000 / 60);
+				};
+		})();
+
+		let canvas;
+
+		class Point {
+			constructor(props = {}) {
+				this.x = props.x || 0;
+				this.y = props.y || 0;
+				this.r = props.r || 2;
+
+				this.range = props.range || 100;
+				this.speed = props.speed || 3;
+
+				this.canvas = props.canvas;
+				this.c = this.canvas.getContext("2d");
+
+				this.direction = this.getRandomDirection();
+			}
+			/**/
+			getRandomDirection() {
+				let x = Math.random() > 0.5 ?
+					1 :
+					-1;
+				let y = Math.random() > 0.5 ?
+					1 :
+					-1;
+				return {
+					x,
+					y
+				};
+			}
+			/**/
+			draw() {
+				if (!this.c) throw new Error('No canvas provided.');
+
+				this.c.beginPath();
+				this.c.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+				this.c.fillStyle = "rgba(250, 250, 250, 1)";
+				this.c.fill();
+				this.c.closePath();
+			}
+
+			checkRange(x, y) {
+				let res = {};
+				let val1 = x <= this.x + this.range && x >= this.x - this.range;
+				let val2 = y <= this.y + this.range && y >= this.y - this.range;
+
+				if (val1 && val2) {
+					let op = y - this.y;
+					let ad = x - this.x;
+					res.hp = Math.sqrt(Math.pow(op, 2) + Math.pow(ad, 2));
+
+					if (res.hp <= this.range) {
+						res.alpha = res.hp / this.range >= 1 ?
+							1 :
+							res.hp / this.range;
+
+						this.c.beginPath();
+						this.c.moveTo(this.x, this.y);
+						this.c.lineTo(x, y);
+						this.c.strokeStyle = `rgba(250, 250, 250, ${1-res.alpha})`;
+						this.c.stroke();
+						this.c.fill();
+						this.c.closePath();
+					}
+				}
+
+				return res;
+			}
+			/**/
+			move() {
+				let x = (0.1 * this.speed) * this.direction.x;
+				let y = (0.1 * this.speed) * this.direction.y;
+
+				this.x += x;
+				this.y += y;
+				// Bounce
+				if (this.x + this.r >= this.canvas.width || this.x - this.r <= 0) {
+					this.x -= x;
+					this.direction.x *= -1;
+				}
+
+				if (this.y + this.r >= this.canvas.height || this.y - this.r <= 0) {
+					this.y -= y;
+					this.direction.y *= -1;
+				}
+			}
+		}
+		/*
+		 *
+		 */
+		class Env {
+			constructor(props = {}) {
+				this.pointsCount = props.pointsCount || 25;
+				this.canvas = props.canvas;
+				this.points = [];
+				this.mouse = {
+					x: undefined,
+					y: undefined
+				};
+				this.speed = props.speed || 3;
+
+				if (this.canvas) {
+					this.c = this.canvas.getContext("2d");
+					this.canvas.onmousemove = this.trackMouse.bind(this);
+					this.init();
+				}
+			}
+			/**/
+			repaint() {
+				this.canvas.width = window.innerWidth;
+				this.canvas.height = window.innerHeight;
+
+				this.c.clearRect(0, 0, this.canvas.width, this.canvas.height);
+				this.drawPoints();
+
+				requestAnimationFrame(this.repaint.bind(this));
+			}
+			/*
+			 * Creates the Points objects.
+			 * 
+			 * @fires this.repaint.
+			 */
+			init() {
+				for (let i = this.pointsCount; i > 0; i--) {
+					let x = Math.random() * this.canvas.width;
+					let y = Math.random() * this.canvas.height;
+
+					let p = new Point({
+						x,
+						y,
+						canvas: this.canvas,
+						speed: this.speed
+					});
+
+					this.points.push(p);
+				}
+				this.repaint();
+			}
+			/**/
+			drawPoints() {
+				for (let a = this.points.length - 1; a >= 0; a--) {
+					let point = this.points[a];
+
+					point.checkRange(this.mouse.x, this.mouse.y);
+					point.draw();
+					point.move();
+
+					for (let e = a; e >= 0; e--) {
+						let prevPoint = this.points[e];
+						let isInRange = point.checkRange(prevPoint.x, prevPoint.y);
+					}
+				}
+			}
+			/**/
+			trackMouse(ev) {
+				this.mouse.x = ev.offsetX;
+				this.mouse.y = ev.offsetY;
+			}
+		}
+
+		document.addEventListener("DOMContentLoaded", ev => {
+			console.clear();
+			console.log("...");
+
+			canvas = document.getElementById("canvas");
+
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+
+			document.body.onresize = function () {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}
+
+			let env1 = new Env({
+				canvas,
+				pointsCount: 150,
+				speed: 5
+			});
+		});
+	</script>
+	<script>
+		$('.gallery ul li a').click(function () {
+			var itemID = $(this).attr('href');
+			$('.gallery ul').addClass('item_open');
+			$(itemID).addClass('item_open');
+			return false;
+		});
+		$('.close').click(function () {
+			$('.port, .gallery ul').removeClass('item_open');
+			return false;
+		});
+
+		$(".gallery ul li a").click(function () {
+			$('html, body').animate({
+				scrollTop: parseInt($("#top").offset().top)
+			}, 400);
+		});
+		$(document).ready(function () {
+			$(".gallery ul li a").click(function () {
+				$("#item02").removeClass("animated slideOutDown");
+				$("#item02").addClass("animated slideInUp");
+			});
+		});
+	</script>
+</body>
+
+</html>
